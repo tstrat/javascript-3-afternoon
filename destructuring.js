@@ -17,6 +17,7 @@ var carDetails = {
 }
 // Do not edit the code above.
 
+
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
@@ -54,7 +55,7 @@ function greeting( obj ) {
 */
 
 //Code Here
-const totalPopulation = ({utah, california, texas, arizona}) => {
+const totalPopulation = function ({utah, california, texas, arizona}) {
   return utah + california + texas + arizona
 }
 
@@ -91,10 +92,8 @@ const ingredients = ({carb, fat, protein}) => [carb, fat, protein]
 const largeNumbers = ({first, second, third}) => {
   return (first < second) ? 
             (first < third) ? 
-              first : 
-              (third < second) ? 
-                third : 
-                second:
+              first :  
+              third : 
         (second < third) ? second : third 
 }
 
@@ -113,8 +112,9 @@ const numberGroups = ({a, b, c}) => {
   if (a.length > b.length) {
     if (a.length > c.length) {
       return a
+    } else {
+      return c
     }
-    return c
   } else if (b.length > c.length) {
     return b
   } else {
